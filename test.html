@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <style>
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        </style>
+        <script>
+            var app = angular.module('myMod', []);
+            app.controller('myController', function($scope) {
+                $scope.usernames = ['user1', 'user2', 'user3'];
+                $scope.passwords = ['pass1', 'pass2', 'pass3'];
+                $scope.attempts = 0;
+                $scope.validate = function() {
+                    var index = $scope.usernames.indexOf($scope.username);
+                    if (index !== -1 && $scope.passwords[index] === $scope.password) {
+                        $scope.message = 'Login successful!';
+                        $scope.attempts = 0;
+                    } else {
+                        $scope.attempts++;
+                        if ($scope.attempts > 3) {
+                            $scope.message = 'User is blocked';
+                        } else {
+                            $scope.message = 'Invalid credentials';
+                        }
+                    }
+                };
+            });
+        </script>
+    </head>
+    <body ng-app="myMod" ng-controller="myController">
+        <div class="container">
+            Username: <br>
+            <input type="text" ng-model="username" /><br>
+            Password: <br>
+            <input type="password" ng-model="password" /><br>
+            <button ng-click="validate()">Login</button>
+            <p>{{message}}</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addcart.css">
+    <title>Shopping Website</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        ul li {
+            font-size: medium;
+            border: solid 1px gray;
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .btn{
+            margin-left:95%;
+            padding:5px;
+            font-size: medium;
+            color:black;
+            background-color: gray;
+            text-align: center;
+            display: inline;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <section>
+            <div id="wrapper">
+                <div id="name1"><a href="addcart.html"><div id="name2"><b>DRIP💦</b></div>CLOTHES</a></div>
+
+                    <div id="tabs">
+                        <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
+                        <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div>
+                    </div>
+
+                    <div id="search">
+                        <input type="text" id="input" name="searchBox" placeholder="Search for Clothing and Accessories">
+                    </div>
+
+                    <div id="tabs">
+                        <a href="cart.html">CART</a>
+                        <a href="wishlist.html">🤍</a>
+                    </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="gap"></div>
+
+    <div id="cartMainContainer">
+        <h1> WISHLIST </h1>
+        <h3>Items:</h3>
+
+        <div class="cartContainer">
+            <main>
+                <div class="listclass">
+                    <ul id="list">
+                        <li>Item1<button class="btn">Remove from Wishlist</button></li>
+                        <li>Item2<button class="btn">Remove from Wishlist</button></li>
+                        <li>Item3<button class="btn">Remove from Wishlist</button></li>
+                        <li>Item4<button class="btn">Remove from Wishlist</button></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script>
+        let cb = document.getElementsByClassName("btn")
+        for(a of cb)
+        a.addEventListener('click', rem)
+        
+        function rem(e){
+            if(confirm('Are you sure you want to remove the item from the list?')){
+                let li = e.target.parentElement;
+                list.removeChild(li);
+            }
+        }
+    </script>
+
+    <footer>
+        <section>    
+            <div id="containerFooter">
+                <div id="webFooter">
+                    <h3>ONLINE STORE</h3>
+                    <p>MEN'S WEAR</p>
+                    <p>WOMEN'S WEAR</p>
+                    <p>CHILD'S WEAR</p>
+                    <p>ACCESSORIES</p>
+                </div>
+                <div id="webFooter">
+                    <h3>CONTACT</h3>
+                    <p>EMAIL US</p>
+                    <p>TWITTER</p>
+                    <p>INSTAGRAM</p>
+                </div>
+                <div id="webFooter">
+                    <h3>CLOTHING PARTNERS</h3>
+                    <p>BRAND A</p>
+                    <p>BRAND B</p>
+                    <p>BRAND C</p>
+                    <p>BRAND D</p>
+                </div>
+                <div id="webFooter">
+                    <h3>ADDRESS</h3>
+                    <p>G-30, Inavolu</p>
+                    <p>Beside AP Secretariat Amaravati</p>
+                    <p>Andhra Pradesh 522237</p>
+                    <p>INDIA</p>
+                </div>
+            </div>
+            <div id="credit"><a href="addcart.html">Group 4</a></div>
+        </section>
+    </footer>
+
+    <script src="addcart.js"></script>
+</body>
+</html>

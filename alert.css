@@ -1,0 +1,53 @@
+.alert-box {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #333;
+color: #fff;
+padding: 15px 25px;
+border-radius: 5px;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+animation: slide-in 0.5s ease-in-out forwards;
+cursor: pointer;
+}
+
+.alert-success {
+background-color: #4CAF50;
+}
+
+.alert-warning {
+background-color: #FF9800;
+}
+
+.alert-danger {
+background-color: #F44336;
+}
+
+.alert-container {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 9999;
+}
+
+.alert-hide {
+animation: slide-out 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+from {
+    transform: translateX(100%);
+}
+to {
+    transform: translateX(0);
+}
+}
+
+@keyframes slide-out {
+from {
+    transform: translateX(0);
+}
+to {
+    transform: translateX(100%);
+}
+}

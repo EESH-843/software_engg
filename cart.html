@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addcart.css">
+    <link rel="stylesheet" href="alert.css">
+    
+    <title>addcart Shopping Website</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        ul li {
+            font-size: medium;
+            border: solid 1px gray;
+            border-radius: 10px;
+            height: 100px;
+            width: 80%;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .btn{
+            padding:5px;
+            font-size: medium;
+            color:black;
+            background-color: #cdcdcd;
+            text-align: center;
+            display: inline;
+            border: none;
+            border-radius: 5px;
+            float: right;
+        }
+
+        .btn:hover{
+            opacity: 0.8;
+        }
+
+        .listItem {
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr;
+        }
+
+        .productData {
+            margin: 10px;
+            font-size: large;
+        }
+
+        .proceed {
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: #cdcdcd;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-left: 72%;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .proceed:hover{
+            opacity: 0.8;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <div id="wrapper">
+                <div id="name1"><a href="addcart.html"><div id="name2"><b>DRIP💦</b></div>CLOTHES</a></div>
+
+                    <div id="tabs">
+                        <div id="clothing"><a href="clothing.html"> CLOTHING </a></div>
+                        <div id="accessories"><a href="accessories.html"> ACCESSORIES </a></div>
+                    </div>
+
+                    <div id="search">
+                        <input type="text" id="input" name="searchBox" placeholder="Search for Clothing and Accessories">
+                    </div>
+
+                    <div id="tabs">
+                        <a href="cart.html">CART</a>
+                        <a href="wishlist.html">🤍</a>
+                    </div>
+            </div>
+        </section>
+    </header>
+    <div class="gap"></div>
+
+    <div id="cartMainContainer">
+        <h1>ITEM CART</h1>
+        <h3>Items:</h3>
+
+        <div class="cartContainer">
+            <main>
+                <div id="listclass" class="listclass">
+                    <ul id="list"></ul>
+                </div>
+            </main>
+        </div>
+
+        <div class="alert-container"></div>
+        <a href="checkout.html"><button class="proceed" onclick="showAlert('success', 'Checked Out!')">Proceed to Check Out</button></a>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="cart.js"></script>
+    <script src="alert.js"></script>
+
+    <footer>
+        <section>    
+            <div id="containerFooter">
+                <div id="webFooter">
+                    <h3>ONLINE STORE</h3>
+                    <p>MEN'S WEAR</p>
+                    <p>WOMEN'S WEAR</p>
+                    <p>CHILD'S WEAR</p>
+                    <p>ACCESSORIES</p>
+                </div>
+                <div id="webFooter">
+                    <h3>CONTACT</h3>
+                    <p>EMAIL US</p>
+                    <p>TWITTER</p>
+                    <p>INSTAGRAM</p>
+                </div>
+                <div id="webFooter">
+                    <h3>CLOTHING PARTNERS</h3>
+                    <p>BRAND A</p>
+                    <p>BRAND B</p>
+                    <p>BRAND C</p>
+                    <p>BRAND D</p>
+                </div>
+                <div id="webFooter">
+                    <h3>ADDRESS</h3>
+                    <p>G-30, Inavolu</p>
+                    <p>Beside AP Secretariat Amaravati</p>
+                    <p>Andhra Pradesh 522237</p>
+                    <p>INDIA</p>
+                </div>
+            </div>
+            <div id="credit"><a href="addcart.html">Group 4</a></div>
+        </section>
+    </footer>
+</body>
+</html>
