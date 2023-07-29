@@ -15,13 +15,15 @@ function validateLogin() {
   if (foundUser && foundPass) {
     document.getElementById("loginMessage").innerText = "Login successful!";
     return true;
-  } else if (foundUser) {
+  } else if (foundUser && !foundPass) {
     // document.getElementById("loginMessage").innerText = "Invalid username or password!";
-    document.getElementById("loginMessage").innerText = "Invalid password!";
+    document.getElementById("loginMessage").innerText =
+      "Username is valid \n Invalid password!";
 
     return false;
-  } else if (foundPass) {
-    document.getElementById("loginMessage").innerText = "Invalid username!";
+  } else if (foundPass && !foundUser) {
+    document.getElementById("loginMessage").innerText =
+      "Password valid \n Invalid username!";
     return false;
   } else {
     document.getElementById("loginMessage").innerText =
